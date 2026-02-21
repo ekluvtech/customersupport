@@ -1,0 +1,119 @@
+# Customer Support Agent Configuration
+
+# LLM Provider Configuration
+# Choose between "ollama" (local), "openai" (cloud), or "vertexai" (Google Cloud)
+llm:
+  provider: ollama  # or "openai", "vertexai", "gemini"
+
+# Ollama Configuration (Local LLM)
+# Used when llm.provider is set to "ollama"
+ollama:
+  base_url: http://localhost:11434
+  model: llama2  # or llama2:13b, mistral, llama3.2, etc.
+  timeout: 300
+  temperature: 0.7
+  max_tokens: 2048
+
+# OpenAI Configuration (Cloud LLM)
+# Used when llm.provider is set to "openai"
+# Uncomment and configure to use OpenAI instead of Ollama
+# openai:
+#   api_key: "${OPENAI_API_KEY}"  # Or set directly here (not recommended for security)
+#   model: gpt-4  # or gpt-3.5-turbo, gpt-4-turbo-preview, etc.
+#   temperature: 0.7
+#   max_tokens: 2048
+#   timeout: 300
+
+# Vertex AI (Gemini) Configuration (Google Cloud)
+# Used when llm.provider is set to "vertexai" or "gemini"
+# Authentication: Use service account JSON file (recommended) or gcloud auth
+# Uncomment and configure to use Vertex AI instead
+# vertexai:
+#   credentials_path: "${GOOGLE_APPLICATION_CREDENTIALS}"  # Path to service account JSON file
+#   project_id: "${GOOGLE_CLOUD_PROJECT}"  # Optional if included in credentials file
+#   location: us-central1  # or us-east1, europe-west1, etc.
+#   model: gemini-pro  # or gemini-pro-vision, gemini-ultra, etc.
+#   temperature: 0.7
+#   max_tokens: 2048
+#   timeout: 300
+
+# MCP Server Configuration
+mcp:
+  servers:
+    - name: zendesk_mcp
+      command: python
+      args: ["-m", "mcp_integrations.zendesk_server"]
+      env:
+        ZENDESK_API_KEY: "${ZENDESK_API_KEY}"
+        ZENDESK_SUBDOMAIN: "${ZENDESK_SUBDOMAIN}"
+        ZENDESK_EMAIL: "${ZENDESK_EMAIL}"
+    
+    - name: slack_mcp
+      command: python
+      args: ["-m", "mcp_integrations.slack_server"]
+      env:
+        SLACK_TOKEN: "${SLACK_TOKEN}"
+    
+    - name: database_mcp
+      command: python
+      args: ["-m", "mcp_integrations.database_server"]
+      env:
+        DATABASE_URL: "${DATABASE_URL}"
+
+# Integration Credentials (alternatively use environment variables)
+integrations:
+  zendesk:
+    subdomain: your_subdomain
+    email: your_email@example.com
+    api_key: your_api_key  # Use env var instead for security
+  
+  slack:
+    token: xoxb-your-token  # Use env var instead for security
+    channel: general
+  
+  database:
+    type: postgresql  # or mongodb, mysql, etc.
+    connection_string: postgresql://user:pass@localhost/dbname
+    pool_size: 5
+  
+  crm:
+    type: salesforce  # or hubspot, etc.
+    api_key: your_api_key
+    instance_url: https://yourinstance.salesforce.com
+
+# Agent Configuration
+agent:
+  name: Customer Support Agent
+  system_prompt: |
+    You are an advanced AI customer support agent powered by MCP (Model Context Protocol).
+    Your goal is to provide personalized, real-time assistance by integrating directly with
+    CRMs, ticketing systems, order databases, and communication tools.
+    
+    Guidelines:
+    - Always verify customer identity before accessing sensitive data
+    - Be empathetic, professional, and concise
+    - Use MCP tools silently to retrieve data and perform actions
+    - Prioritize privacy and security
+    - Aim for faster resolution than traditional bots
+  
+  identity_verification:
+    required: true
+    methods: ["order_number", "email", "ticket_id"]
+  
+  context:
+    max_history: 50
+    persist_across_sessions: true
+    memory_backend: chromadb  # or postgres, file
+
+# Security
+security:
+  encryption_enabled: true
+  data_retention_days: 90
+  log_sensitive_data: false
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/agent.log
+

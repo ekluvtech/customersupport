@@ -1,0 +1,38 @@
+# Core dependencies
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# HTTP clients
+httpx>=0.25.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Database support (choose based on your database)
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0  # Uncomment for PostgreSQL
+# pymongo>=4.5.0  # Uncomment for MongoDB
+
+# API integrations (install as needed)
+zendesk>=1.1.0  # Uncomment for Zendesk integration
+slack-sdk>=3.23.0  # Uncomment for Slack integration
+
+# Context and memory (optional)
+# chromadb>=0.4.0  # Uncomment for ChromaDB memory backend
+
+# Utilities
+python-dateutil>=2.8.0
+
+# API server (optional - for REST API interface)
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# OpenAI support (optional - only needed if using OpenAI provider)
+openai>=1.3.0
+
+# Vertex AI support (optional - only needed if using Vertex AI/Gemini provider)
+google-cloud-aiplatform>=1.38.0
+
+#Run the following command to fix the SSL certificate issue:
+#pip install --upgrade certifi
+#export SSL_CERT_FILE=$(python -m certifi)

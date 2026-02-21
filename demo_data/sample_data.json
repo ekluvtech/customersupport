@@ -1,0 +1,330 @@
+{
+  "tickets": [
+    {
+      "subject": "Order #ORD-2024-001234 not delivered - Expected 3 days ago",
+      "description": "I placed an order (#ORD-2024-001234) on January 2nd for a wireless keyboard. The order confirmation said it would arrive by January 5th, but it's now January 8th and I still haven't received it. I've checked my mailbox and front door multiple times. The tracking information shows 'in transit' but hasn't updated in 2 days. I need this for work - can you help me track it down?",
+      "requester_email": "john.doe@example.com",
+      "requester_name": "John Doe",
+      "status": "open",
+      "priority": "high",
+      "tags": ["shipping", "delayed", "order_ORD-2024-001234", "urgent"]
+    },
+    {
+      "subject": "Product defect - Camera won't turn on after delivery",
+      "description": "I received my order (#ORD-2024-001567) yesterday - a Canon EOS R5 camera. I was very excited to use it, but when I tried to turn it on, nothing happens. I've tried:\n- Different batteries (fully charged)\n- Different charging cables\n- Multiple power sources\n- Checking all connections\n\nThe camera appears to be completely dead. This is very disappointing as I need it for an upcoming photography assignment next week. I'd like to request a replacement as soon as possible, or if that's not possible, a full refund.",
+      "requester_email": "jane.smith@example.com",
+      "requester_name": "Jane Smith",
+      "status": "open",
+      "priority": "urgent",
+      "tags": ["defect", "replacement", "order_ORD-2024-001567", "quality_issue"]
+    },
+    {
+      "subject": "Refund not processed - Order cancelled 6 days ago",
+      "description": "I cancelled my order #ORD-2024-000891 on January 3rd through your website. The cancellation was confirmed immediately, and I received an email saying the refund would be processed within 3-5 business days. It's now been 6 business days (January 9th) and I still haven't seen the refund appear on my credit card statement. I've checked my bank account multiple times. Please process the refund to my original payment method (ending in 4532) immediately.",
+      "requester_email": "mike.johnson@example.com",
+      "requester_name": "Mike Johnson",
+      "status": "pending",
+      "priority": "normal",
+      "tags": ["refund", "billing", "order_ORD-2024-000891", "payment_issue"]
+    },
+    {
+      "subject": "Can't log into my account - Password reset emails not arriving",
+      "description": "I'm having trouble accessing my account. When I try to log in, it says my password is incorrect. I've tried the 'Forgot Password' feature multiple times over the past 2 days, but I'm not receiving any password reset emails. I've checked:\n- My spam/junk folder\n- That I'm using the correct email address (sarah.williams@example.com)\n- My email inbox isn't full\n\nI need access to my account to download my order history and invoice for tax purposes. Can you help me regain access?",
+      "requester_email": "sarah.williams@example.com",
+      "requester_name": "Sarah Williams",
+      "status": "open",
+      "priority": "normal",
+      "tags": ["account", "login", "password", "access_issue"]
+    },
+    {
+      "subject": "Unexpected charge on credit card - $149.99 transaction",
+      "description": "I noticed a charge of $149.99 on my credit card statement dated January 4th that I don't recognize. The merchant name shows as 'YourCompany' but I don't recall making a purchase for that amount recently. I've reviewed my recent orders and none of them match this amount. Can you help me identify what this charge is for? If it's an error, I'd like it reversed immediately. My account email is david.brown@example.com.",
+      "requester_email": "david.brown@example.com",
+      "requester_name": "David Brown",
+      "status": "open",
+      "priority": "high",
+      "tags": ["billing", "charge", "dispute", "fraud_check"]
+    },
+    {
+      "subject": "Wrong item received - Ordered iPhone 15 Pro, got iPhone 15",
+      "description": "I ordered an iPhone 15 Pro 256GB (order #ORD-2024-002345) but received a regular iPhone 15 256GB instead. The box was labeled correctly, but the actual phone inside is the wrong model. I need the Pro version for work (I need the better camera and processor). Can you please send me the correct item? I'm willing to return the incorrect one once I receive the right product.",
+      "requester_email": "emily.chen@example.com",
+      "requester_name": "Emily Chen",
+      "status": "open",
+      "priority": "high",
+      "tags": ["wrong_item", "exchange", "order_ORD-2024-002345", "fulfillment_error"]
+    },
+    {
+      "subject": "Subscription billing issue - Charged twice this month",
+      "description": "I have a monthly subscription to your premium service, and I noticed I was charged twice in January - once on the 1st and again on the 15th. This is unusual as I've only ever been charged once per month. I checked my subscription settings and it still shows as monthly, not bi-weekly. Please refund the duplicate charge from January 15th ($29.99).",
+      "requester_email": "robert.taylor@example.com",
+      "requester_name": "Robert Taylor",
+      "status": "open",
+      "priority": "normal",
+      "tags": ["subscription", "billing", "duplicate_charge", "refund"]
+    },
+    {
+      "subject": "Product arrived damaged - Screen cracked on laptop",
+      "description": "I received my new MacBook Pro (order #ORD-2024-001890) today, but when I opened the box, I found the screen was cracked. The packaging appeared intact, so this might have been a manufacturing defect or damage that occurred before shipping. I took photos of the damage and the packaging. I need this laptop for my business and can't use it in this condition. Please send a replacement immediately.",
+      "requester_email": "lisa.anderson@example.com",
+      "requester_name": "Lisa Anderson",
+      "status": "open",
+      "priority": "urgent",
+      "tags": ["damaged", "replacement", "order_ORD-2024-001890", "shipping_issue"]
+    },
+    {
+      "subject": "Need to change shipping address - Order hasn't shipped yet",
+      "description": "I placed an order (#ORD-2024-002678) yesterday, but I realized I entered my old address. I've moved since my last order. The order status shows 'processing' and hasn't shipped yet. Can you please update the shipping address to:\n123 New Street, Apt 4B\nSan Francisco, CA 94102\n\nMy email is confirmed as alex.martinez@example.com. Thank you!",
+      "requester_email": "alex.martinez@example.com",
+      "requester_name": "Alex Martinez",
+      "status": "open",
+      "priority": "normal",
+      "tags": ["address_change", "order_ORD-2024-002678", "shipping"]
+    },
+    {
+      "subject": "Quality issue - Headphones stopped working after 2 weeks",
+      "description": "I purchased wireless headphones (order #ORD-2023-009876) about 2 weeks ago. They worked great initially, but now they won't connect to any device. I've tried:\n- Resetting them multiple times\n- Pairing with different devices\n- Charging them fully\n- Updating firmware\n\nNothing works. The power button responds, but they just won't pair. I'm still within the 30-day return window. Can I get a refund or replacement?",
+      "requester_email": "jennifer.wilson@example.com",
+      "requester_name": "Jennifer Wilson",
+      "status": "open",
+      "priority": "normal",
+      "tags": ["quality", "warranty", "return", "order_ORD-2023-009876"]
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD-2024-001234",
+      "customer_email": "john.doe@example.com",
+      "customer_name": "John Doe",
+      "order_date": "2024-01-02",
+      "status": "in_transit",
+      "shipping_address": "123 Main St, New York, NY 10001",
+      "total_amount": 89.99,
+      "items": [
+        {"product": "Wireless Mechanical Keyboard", "sku": "KB-WIRELESS-001", "quantity": 1, "price": 89.99}
+      ],
+      "tracking_number": "1Z999AA10123456784",
+      "estimated_delivery": "2024-01-05",
+      "carrier": "UPS",
+      "payment_method": "Credit Card ending in 4532"
+    },
+    {
+      "order_id": "ORD-2024-001567",
+      "customer_email": "jane.smith@example.com",
+      "customer_name": "Jane Smith",
+      "order_date": "2024-01-01",
+      "status": "delivered",
+      "shipping_address": "456 Oak Ave, Los Angeles, CA 90001",
+      "total_amount": 3899.99,
+      "items": [
+        {"product": "Canon EOS R5 Camera Body", "sku": "CAM-CANON-R5", "quantity": 1, "price": 3899.99}
+      ],
+      "tracking_number": "1Z999AA10234567890",
+      "delivery_date": "2024-01-07",
+      "carrier": "FedEx",
+      "payment_method": "Credit Card ending in 7821"
+    },
+    {
+      "order_id": "ORD-2024-000891",
+      "customer_email": "mike.johnson@example.com",
+      "customer_name": "Mike Johnson",
+      "order_date": "2024-01-02",
+      "status": "cancelled",
+      "shipping_address": "789 Pine Rd, Chicago, IL 60601",
+      "total_amount": 299.99,
+      "items": [
+        {"product": "Smart Watch Pro", "sku": "WATCH-SMART-PRO", "quantity": 1, "price": 299.99}
+      ],
+      "cancellation_date": "2024-01-03",
+      "refund_status": "pending",
+      "refund_amount": 299.99,
+      "payment_method": "Credit Card ending in 4532"
+    },
+    {
+      "order_id": "ORD-2024-002345",
+      "customer_email": "emily.chen@example.com",
+      "customer_name": "Emily Chen",
+      "order_date": "2023-12-30",
+      "status": "delivered",
+      "shipping_address": "321 Elm St, Houston, TX 77001",
+      "total_amount": 1199.99,
+      "items": [
+        {"product": "iPhone 15 Pro 256GB", "sku": "PHONE-IPHONE15PRO-256", "quantity": 1, "price": 1199.99}
+      ],
+      "tracking_number": "1Z999AA10345678901",
+      "delivery_date": "2024-01-05",
+      "carrier": "UPS",
+      "payment_method": "Credit Card ending in 9012",
+      "notes": "Customer reports wrong item received"
+    },
+    {
+      "order_id": "ORD-2024-001890",
+      "customer_email": "lisa.anderson@example.com",
+      "customer_name": "Lisa Anderson",
+      "order_date": "2024-01-06",
+      "status": "delivered",
+      "shipping_address": "654 Maple Dr, Phoenix, AZ 85001",
+      "total_amount": 2499.99,
+      "items": [
+        {"product": "MacBook Pro 16-inch M3 Pro", "sku": "LAPTOP-MBP16-M3PRO", "quantity": 1, "price": 2499.99}
+      ],
+      "tracking_number": "1Z999AA10456789012",
+      "delivery_date": "2024-01-08",
+      "carrier": "FedEx",
+      "payment_method": "Credit Card ending in 3456",
+      "notes": "Customer reports screen damage"
+    },
+    {
+      "order_id": "ORD-2024-002678",
+      "customer_email": "alex.martinez@example.com",
+      "customer_name": "Alex Martinez",
+      "order_date": "2024-01-08",
+      "status": "processing",
+      "shipping_address": "789 Old Street, Los Angeles, CA 90001",
+      "total_amount": 549.99,
+      "items": [
+        {"product": "Gaming Monitor 27-inch", "sku": "MON-GAMING-27", "quantity": 1, "price": 549.99}
+      ],
+      "payment_method": "Credit Card ending in 6789",
+      "notes": "Customer requested address change"
+    },
+    {
+      "order_id": "ORD-2023-009876",
+      "customer_email": "jennifer.wilson@example.com",
+      "customer_name": "Jennifer Wilson",
+      "order_date": "2023-12-20",
+      "status": "delivered",
+      "shipping_address": "123 Tech Blvd, Seattle, WA 98101",
+      "total_amount": 199.99,
+      "items": [
+        {"product": "Wireless Noise-Cancelling Headphones", "sku": "HEAD-WIRELESS-NC", "quantity": 1, "price": 199.99}
+      ],
+      "tracking_number": "1Z999AA10567890123",
+      "delivery_date": "2023-12-22",
+      "carrier": "UPS",
+      "payment_method": "Credit Card ending in 2345",
+      "notes": "Customer reports connection issues after 2 weeks"
+    }
+  ],
+  "salesforce_cases": [
+    {
+      "subject": "Order Delivery Delay - Order #ORD-2024-001234",
+      "description": "Customer reports order #ORD-2024-001234 has not arrived as expected. Expected delivery was January 5th, but it's now January 8th. Tracking shows 'in transit' with no updates in 2 days. Customer needs item for work.",
+      "contact_email": "john.doe@example.com",
+      "status": "New",
+      "priority": "High",
+      "type": "Problem",
+      "origin": "Web"
+    },
+    {
+      "subject": "Product Defect - Camera Not Working",
+      "description": "Customer received Canon EOS R5 camera (order #ORD-2024-001567) that will not turn on. Customer has tried multiple troubleshooting steps. Requests immediate replacement as needed for assignment next week.",
+      "contact_email": "jane.smith@example.com",
+      "status": "New",
+      "priority": "High",
+      "type": "Problem",
+      "origin": "Web"
+    },
+    {
+      "subject": "Refund Processing Delay",
+      "description": "Customer cancelled order #ORD-2024-000891 on January 3rd. Refund was supposed to process within 3-5 business days but it's now day 6. Customer has not received refund to credit card ending in 4532.",
+      "contact_email": "mike.johnson@example.com",
+      "status": "In Progress",
+      "priority": "Medium",
+      "type": "Question",
+      "origin": "Email"
+    },
+    {
+      "subject": "Wrong Item Received - iPhone Model Mismatch",
+      "description": "Customer ordered iPhone 15 Pro but received iPhone 15 instead (order #ORD-2024-002345). Box was labeled correctly but wrong product inside. Customer needs Pro version for work requirements.",
+      "contact_email": "emily.chen@example.com",
+      "status": "New",
+      "priority": "High",
+      "type": "Problem",
+      "origin": "Web"
+    },
+    {
+      "subject": "Damaged Product - Laptop Screen Cracked",
+      "description": "Customer received MacBook Pro (order #ORD-2024-001890) with cracked screen. Packaging appeared intact. Customer has photos. Needs replacement for business use.",
+      "contact_email": "lisa.anderson@example.com",
+      "status": "New",
+      "priority": "High",
+      "type": "Problem",
+      "origin": "Web"
+    }
+  ],
+  "slack_messages": [
+    {
+      "channel": "customer-support",
+      "user": "john.doe@example.com",
+      "text": "Hi team, I need urgent help with order #ORD-2024-001234. It was supposed to arrive 3 days ago but I still haven't received it. The tracking hasn't updated in 2 days. I need this for work - can someone look into this ASAP?",
+      "timestamp": "2024-01-08T10:30:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "support_agent_1",
+      "text": "I can help you with that, John. Let me check the tracking details and see what's happening with your shipment. I'll update you within the next hour.",
+      "timestamp": "2024-01-08T10:32:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "jane.smith@example.com",
+      "text": "URGENT: The camera I received (order #ORD-2024-001567) won't turn on at all. I've tried everything - different batteries, cables, etc. I need this for an assignment next week. Can I get a replacement sent out today?",
+      "timestamp": "2024-01-07T14:15:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "support_agent_2",
+      "text": "I'm sorry to hear about the camera issue, Jane. That's very frustrating. I've escalated this to our priority queue and we'll process a replacement order today. You should receive a confirmation email within the hour. We'll also include a prepaid return label for the defective unit.",
+      "timestamp": "2024-01-07T14:18:00Z"
+    },
+    {
+      "channel": "billing-support",
+      "user": "david.brown@example.com",
+      "text": "I see a charge for $149.99 on my statement from January 4th that I don't recognize. I've checked all my recent orders and none match this amount. Can someone investigate this?",
+      "timestamp": "2024-01-06T09:00:00Z"
+    },
+    {
+      "channel": "billing-support",
+      "user": "support_agent_3",
+      "text": "Let me look into that charge for you, David. I'll review your account history and payment records. I'll get back to you within 2 hours with details about what this charge is for.",
+      "timestamp": "2024-01-06T09:05:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "emily.chen@example.com",
+      "text": "I received the wrong iPhone model. I ordered the iPhone 15 Pro but got the regular iPhone 15 instead (order #ORD-2024-002345). The box says Pro but the phone inside is not. Help!",
+      "timestamp": "2024-01-05T16:20:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "support_agent_4",
+      "text": "That's definitely a fulfillment error on our end, Emily. I apologize for the inconvenience. I've created a replacement order for the correct iPhone 15 Pro model and it will ship today with expedited shipping at no charge. You'll receive a return label for the incorrect item.",
+      "timestamp": "2024-01-05T16:25:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "lisa.anderson@example.com",
+      "text": "Just received my MacBook Pro (order #ORD-2024-001890) and the screen is cracked! The box looked fine so this must have been damaged before shipping. I have photos. Need a replacement ASAP for my business.",
+      "timestamp": "2024-01-08T11:45:00Z"
+    },
+    {
+      "channel": "quality-issues",
+      "user": "support_agent_5",
+      "text": "Lisa, I've initiated an express replacement for your MacBook Pro. This will ship today with next-day delivery. Please use the prepaid return label we're sending for the damaged unit. Our quality team will investigate how this occurred.",
+      "timestamp": "2024-01-08T11:50:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "alex.martinez@example.com",
+      "text": "Hi, I need to change the shipping address for my order #ORD-2024-002678. I entered my old address by mistake. Can someone update it before it ships?",
+      "timestamp": "2024-01-08T13:10:00Z"
+    },
+    {
+      "channel": "customer-support",
+      "user": "support_agent_1",
+      "text": "I can help with that, Alex! What's the correct shipping address? I'll update it right away before the order ships.",
+      "timestamp": "2024-01-08T13:12:00Z"
+    }
+  ]
+}
