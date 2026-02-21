@@ -122,7 +122,7 @@ If you were using separate servers, simply:
 
 1. Check if port is already in use:
    ```bash
-   lsof -i :8001
+   lsof -i :8000
    ```
 
 2. Check environment variables are set:
@@ -136,7 +136,7 @@ If you were using separate servers, simply:
 
 1. Verify servers are running:
    ```bash
-   curl http://localhost:8001/health
+   curl http://localhost:8000/health
    ```
 
 2. Check firewall/network settings
@@ -152,6 +152,6 @@ python -m mcp_integrations.zendesk_server --stdio
 
 To run in HTTP mode (default):
 ```bash
-python -m mcp_integrations.zendesk_server --http --port 8001
+python -m mcp_integrations.zendesk_server --http --port 8000
 ```
 
