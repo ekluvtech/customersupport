@@ -33,10 +33,6 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
 1. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
-   #run the following commands if you get certificate issue while connect Slack API
-   
-   pip install --upgrade certifi
-   export SSL_CERT_FILE=$(python -m certifi)
    ```
 
 2. **Configure the agent:**
@@ -115,6 +111,8 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
    python -m agent.api
    ```
 
+pip install --upgrade certifi
+export SSL_CERT_FILE=$(python -m certifi)
 
 ## Usage
 

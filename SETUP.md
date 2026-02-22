@@ -59,7 +59,7 @@ For security, use environment variables for sensitive credentials:
 export ZENDESK_API_KEY="your_api_key"
 export ZENDESK_SUBDOMAIN="your_subdomain"
 export ZENDESK_EMAIL="your_email@example.com"
-export SLACK_TOKEN="xoxb-your-token"
+export SLACK_TOKEN="xoxp-your-token"
 export DATABASE_URL="postgresql://user:pass@localhost/dbname"
 ```
 
@@ -69,7 +69,7 @@ Or create a `.env` file:
 ZENDESK_API_KEY=your_api_key
 ZENDESK_SUBDOMAIN=your_subdomain
 ZENDESK_EMAIL=your_email@example.com
-SLACK_TOKEN=xoxb-your-token
+SLACK_TOKEN=xoxp-your-token
 DATABASE_URL=postgresql://user:pass@localhost/dbname
 ```
 
