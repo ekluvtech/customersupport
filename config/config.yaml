@@ -34,7 +34,7 @@ vertexai:
 mcp:
   servers:
     - name: unified_mcp
-      url: http://localhost:8000
+      url: ${MCP_SERVER_URL:-http://localhost:8000}
       # Unified MCP server combining all integrations
       # Start with: python -m mcp_integrations.unified_server --http --port 8000
       env:
