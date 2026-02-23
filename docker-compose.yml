@@ -11,21 +11,21 @@ services:
       - "8000:8000"
     environment:
       # Zendesk credentials
-      - ZENDESK_SUBDOMAIN=${ZENDESK_SUBDOMAIN:-}
-      - ZENDESK_EMAIL=${ZENDESK_EMAIL:-}
-      - ZENDESK_API_KEY=${ZENDESK_API_KEY:-}
+      - ZENDESK_SUBDOMAIN=${ZENDESK_SUBDOMAIN}
+      - ZENDESK_EMAIL=${ZENDESK_EMAIL}
+      - ZENDESK_API_KEY=${ZENDESK_API_KEY}
       # Slack credentials
-      - SLACK_TOKEN=${SLACK_TOKEN:-}
+      - SLACK_TOKEN=${SLACK_TOKEN}
       # Database connection
-      - DATABASE_URL=${DATABASE_URL:-postgresql://user:pass@db:5432/customersupport}
+      - DATABASE_URL=${DATABASE_URL}
       # Google Cloud (for Vertex AI)
-      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS:-}
-      - GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT:-}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+      - GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT}
     volumes:
       # Mount config if needed
       - ./config:/app/config:ro
       # Mount Google credentials if using Vertex AI
-      - ${GOOGLE_APPLICATION_CREDENTIALS:-./.google-credentials}:/app/.google-credentials:ro
+     # - ${GOOGLE_APPLICATION_CREDENTIALS}:/app/.google-credentials:ro
     networks:
       - customer-support-network
     restart: unless-stopped
@@ -47,14 +47,13 @@ services:
     environment:
       # LLM Configuration
       - LLM_PROVIDER=${LLM_PROVIDER:-vertexai}
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       # Google Cloud (for Vertex AI)
-      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS:-}
-      - GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT:-}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+      - GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT}
       # MCP Server URL (used in config)
-      - MCP_SERVER_URL=${MCP_SERVER_URL:-http://mcp-server:8000}
+      - MCP_SERVER_URL=http://mcp-server:8000
       # Database connection
-      - DATABASE_URL=${DATABASE_URL:-postgresql://user:pass@db:5432/customersupport}
+      - DATABASE_URL=${DATABASE_URL}
       # Memory backend
       - MEMORY_BACKEND=${MEMORY_BACKEND:-memory}
       - CHROMADB_PATH=${CHROMADB_PATH:-/app/data/chroma}
@@ -62,7 +61,7 @@ services:
       # Mount config
       - ./config:/app/config:ro
       # Mount Google credentials if using Vertex AI
-      - ${GOOGLE_APPLICATION_CREDENTIALS:-./.google-credentials}:/app/.google-credentials:ro
+      #- ${GOOGLE_APPLICATION_CREDENTIALS}:/app/.google-credentials:ro
       # Mount data directory for ChromaDB if using
       - ./data:/app/data
     depends_on:
@@ -113,7 +112,7 @@ services:
 
 networks:
   customer-support-network:
-    driver: bridge
+      driver: bridge
 
 # volumes:
 #   postgres_data:

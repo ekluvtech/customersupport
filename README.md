@@ -34,7 +34,17 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
    ```bash
    pip install -r requirements.txt
    ```
-
+2. **Create developer accounts**
+  - Zendesk trial or dev/sandbox account
+  - Slack app in a development workspace
+  - Set up an order database(PostgreSQL/MySQL for production-like testing)
+  - Choose an LLM provider (OpenAI, Anthropic, Geminietc.) and get an API key
+  - export all the required environment varaibles
+  - export ZENDESK_SUBDOMAIN=*********@
+  - export ZENDESK_EMAIL=*********@gmail.com
+  - export ZENDESK_API_KEY=***************************
+  - export SLACK_TOKEN=xoxp-*********-10255901183920-*********-***9301425075be6f3170***e95241c7
+  - export DATABASE_URL="postgresql://ordruser:Admin123@localhost/ordrmgmnt"
 2. **Configure the agent:**
    ```bash
    cp config/config.example.yaml config/config.yaml
@@ -77,11 +87,6 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
      - Set credentials path:
        ```bash
        export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json
-       ```
-   - **Option 2: User Credentials**
-     - Authenticate with Google Cloud:
-       ```bash
-       gcloud auth application-default login
        export GOOGLE_CLOUD_PROJECT=your-project-id
        ```
    - Install Vertex AI dependencies:
@@ -100,17 +105,20 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
      ```
    - See [GOOGLE_CLOUD_SETUP.md](GOOGLE_CLOUD_SETUP.md) for detailed setup instructions
    - See [VERTEX_AI_TROUBLESHOOTING.md](VERTEX_AI_TROUBLESHOOTING.md) if you encounter rate limit errors (429)
-
-4. **Run the interactive chat:**
-   ```bash
-   python -m examples.interactive_chat
+4. **Run MCP server:**
+  ```bash
+    `python -m mcp_integrations.unified_server --http --port 8000` (running all the tools under unified server)
    ```
 
-   Or start the API server:
+5. **Start the API server:**
    ```bash
    python -m agent.api
    ```
-
+6. **Modern chat interface for customers:**
+   ```bash
+   python -m agent.api
+   ``
+#if you get any certificate issue while connection to slack
 pip install --upgrade certifi
 export SSL_CERT_FILE=$(python -m certifi)
 
