@@ -23,6 +23,7 @@ COPY integrations/ ./integrations/
 COPY mcp_integrations/ ./mcp_integrations/
 COPY utils/ ./utils/
 COPY pyproject.toml .
+COPY keys.json  .
 
 # Set Python path
 ENV PYTHONPATH=/app
@@ -37,5 +38,6 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Run the API server with configurable workers
 # Default: 4 workers, can be overridden with WORKER_PROCESSES env var
-CMD ["sh", "-c", "uvicorn agent.api:app --host 0.0.0.0 --port 8100 --workers ${WORKER_PROCESSES:-4} --worker-class uvicorn.workers.UvicornWorker"]
+    CMD ["sh", "-c", "uvicorn agent.api:app --host 0.0.0.0 --port 8100 --workers ${WORKER_PROCESSES:-4}"]
 
+#CMD ["python", "-m", "agent.api", "--http", "--host", "0.0.0.0", "--port", "8100"]

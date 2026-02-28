@@ -30,11 +30,23 @@ See [SETUP.md](SETUP.md) for detailed installation and configuration instruction
 
 ### Basic Setup
 
+0.Create developer accounts for Zendesk and Slack
+  https://ekluvtech.com/2026/02/21/creating-developer-accounts-for-zendesk-and-slack/
 1. **Install dependencies:**
+  ```bash
+    #windows
+    python3  -m  venv custsupport
+    .\custsupport\Scripts\activate
+
+    #Mac
+    python3.10 -m venv custsupport
+    source custsupport/bin/activate
+  ```
    ```bash
    pip install -r requirements.txt
    ```
-2. **Create developer accounts**
+   
+   2. **Create developer accounts**
   - Zendesk trial or dev/sandbox account
   - Slack app in a development workspace
   - Set up an order database(PostgreSQL/MySQL for production-like testing)
